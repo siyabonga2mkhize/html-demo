@@ -1,23 +1,12 @@
-table{
-    width: 500px;
-}
 
-th{
-    text-align: center;
-    background-color: #ddd;
-}
-
-table, th, td{
-    border: 1px solid #000;
-    border-collapse: collapse;
-}
 
 .imgLogo{ 
+    position: relative;
     display: block;
     margin-left: 0;
     margin-right: 5%;
-    width : 1000px; 
-    height:  200px;
+    width : 45vw; 
+    height:  25vh;
 }
 
 .grid_container{
@@ -30,9 +19,11 @@ table, th, td{
 .container{
     display : flex;
     align-items: center;
+    font-size: 30px;
 
 }
 img {
+    display: flex;
     margin-right: 100px;
     width: 320px;
     height: 450px;
@@ -43,5 +34,18 @@ hr{
     height: 2px;
     background-color: black;
     margin: 20px ;
+
+}
+
+.video-bg{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    top :0;
+    left :0; 
+    width: 100vw;
+    height: 110vh;
+    object-fit: cover;
+    z-index: -1;
 
 }
