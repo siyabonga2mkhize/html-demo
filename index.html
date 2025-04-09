@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sign Up with Google Sheets</title>
-    <script>
-        function sendData(e) {
-            e.preventDefault();
-            console.log("Form is submitting!");
-        }
-        function sendData(e) {
-            e.preventDefault();
-            const formData = {
-                name: document.getElementById("name").value,
-                surname: document.getElementById("surname").value,
-                password: document.getElementById("password").value,
-            };
-
-            fetch("https://script.google.com/macros/s/AKfycbzw9_AT4q75oJu9rubCzGqsXrGO23lcTJEQNoXPouw50H37mMT8u67Fm8dUaLJQAjZRHg/exec", {
-                method: "POST",
-                body: JSON.stringify(formData),
-                headers: { "Content-Type": "application/json" }
-            })
-            .then(res => res.text())
-            .then(data => {
-                alert("Submitted successfully: " + data);
-            });
-        }
-    </script>
+  <meta charset="UTF-8">
+  <title>Signup Form</title>
 </head>
 <body>
-    <h2>Sign Up</h2>
-    <form onsubmit="sendData(event)">
-        <input id="name" type="text" placeholder="Name" required><br>
-        <input id="surname" type="text" placeholder="Surname" required><br>
-        <input id="password" type="password" placeholder="Password" required><br>
-        <button type="submit">Sign Up</button>
-    </form>
+  <h2>Signup Form</h2>
+
+  <form id="signupForm">
+    <input type="text" name="name" placeholder="Name" required><br>
+    <input type="text" name="surname" placeholder="Surname" required><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const encodedData = new URLSearchParams(formData).toString();
+
+      fetch("https://script.google.com/macros/s/AKfycbzw9_AT4q75oJu9rubCzGqsXrGO23lcTJEQNoXPouw50H37mMT8u67Fm8dUaLJQAjZRHg/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encodedData,
+      })
+      .then(response => response.text())
+      .then(result => {
+        alert("Submitted successfully!");
+        form.reset();
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("Submission failed!");
+      });
+    });
+  </script>
 </body>
 </html>
