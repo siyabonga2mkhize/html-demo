@@ -2,42 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Signup Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Signup Form</h2>
+<div class="container">
+  <header>
+    <div class="title">PRODUCT LIST</div>
+    <div class="icon-cart">
+      <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+      </svg>
+      <span>0</span>      
+    </div>
+  </header>
+  <body>
 
-  <form id="signupForm">
-    <input type="text" name="name" placeholder="Name" required><br>
-    <input type="text" name="surname" placeholder="Surname" required><br>
-    <button type="submit">Submit</button>
-  </form>
+  <div class="listProduct">
+    <div class="item">
+      <img src="Images\WHITE.jpg" alt="White tee">
+      <h2>NAME PRODUCT </h2>
+      <div class="price">R200</div>
+      <button class="addCart">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+</body>
+<div class="cartTab">
+  <h1> Shopping Cart</h1>
+  <div class="listCart">
+    <div class="item">
+      <div class="image">
+        <img src="Images\WHITE.jpg" alt="White tee">
+      </div>
+    <div class="name"> 
+      Name
+    </div>
+      <div class="totalPrice">
+        R200
+      </div>
+      <div class="quantity">
+        <span class="minus"><</span>
+        <span>1</span>
+        <span class="plus">></span>
+      </div>
+    </div>
 
-  <script>
-    document.getElementById("signupForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+  </div>
+  <div class="btn">
+    <button class="close  onclick="closeCart()">CLOSE</button>
+    <button class="checkOut">Checkout</button>
 
-      const form = e.target;
-      const formData = new FormData(form);
-      const encodedData = new URLSearchParams(formData).toString();
+  </div>
+</div>
 
-      fetch("https://script.google.com/macros/s/AKfycbzw9_AT4q75oJu9rubCzGqsXrGO23lcTJEQNoXPouw50H37mMT8u67Fm8dUaLJQAjZRHg/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: encodedData,
-      })
-      .then(response => response.text())
-      .then(result => {
-        alert("Submitted successfully!");
-        form.reset();
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        alert("Submission failed!");
-      });
-    });
-  </script>
+
+<script src="app.js"></script>
 </body>
 </html>
