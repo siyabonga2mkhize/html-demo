@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+    <script>
+        const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = '../CSS/style.css'; // Use relative path based on where your HTML is
+document.head.appendChild(link);
+    </script>
 </head>
 <body>
     <nav>

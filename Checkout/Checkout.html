@@ -4,18 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="/CSS/style.css">
-    <style>
-        .buttonDownload {
-            background-color: black; 
-            color: white; 
-            border-radius: 10px; 
-            padding: 15px 30px; 
-            font-size: 18px; 
-            border: none; 
-            cursor: pointer;    
-        }
-    </style>
+<script>
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../CSS/style.css'; // Use relative path based on where your HTML is
+        document.head.appendChild(link);
+</script>
 </head>
 <body>
     <a href="/index.html" class="backToCart" target="_self">Back to Cart</a>
