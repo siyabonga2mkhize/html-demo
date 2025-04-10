@@ -14,8 +14,13 @@ document.head.appendChild(link);
 
 <body>
     <nav>
-        <a href="/Checkout/Checkout.html" class="backToCheckOut">Back to Checkout</a>
-        </nav>
+        <button class="backToCheckOut" onclick="goToCheckout()">Back to Checkout</button>
+    </nav>
+    <script>
+        function goToCheckout() {
+    window.location.href = '/Checkout/Checkout.html';
+}
+    </script>
     <header>
         <h1>Collection</h1>
     </header>

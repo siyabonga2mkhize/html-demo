@@ -291,7 +291,7 @@ body.showCart .container{
     color: white; 
     border-radius: 10px; 
     padding: 5px 10px; 
-    font-size: 18px; 
+    font-size: 30px; 
     border: none; 
     cursor: pointer;
     outline: none; 
@@ -317,7 +317,54 @@ footer{
 }
 /**Collection Page */
 .backToCheckOut{
+    background-color: red; 
+    color: white; 
+    border-radius: 10px; 
+    padding: 2.5px 5px; 
+    font-size: 12px; 
+    border: none; 
+    cursor: pointer;
+    outline: none; 
+    appearance: none; 
+    position: absolute; 
+    top: 5px; 
+    left: 5px; 
     margin-bottom: 20px; 
-    margin-left: 20px; 
     transform: none; 
 }
+/**back to Cart Page */
+.backToCart{
+    background-color: red; 
+    color: white; 
+    border-radius: 10px; 
+    padding: 2.5px 5px; 
+    font-size: 12px; 
+    border: none; 
+    cursor: pointer;
+    outline: none; 
+    appearance: none; 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    margin-bottom: 5px; 
+    transform: none; 
+}
+
+/**to collection polciy*/
+.collectionPolicy{
+    background-color: gray; 
+    color: lightblue; 
+    border-radius: 10px; 
+    padding: 2.5px 5px; 
+    font-size: 12px; 
+    border: none; 
+    cursor: pointer;
+    outline: none; 
+    appearance: none; 
+    position: absolute; 
+    bottom: 100px; 
+    left: 0px; 
+    margin-bottom: 5px; 
+    transform: none; 
+}
+
