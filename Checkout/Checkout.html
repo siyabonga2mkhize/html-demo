@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+<script>
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../CSS/style.css'; // Use relative path based on where your HTML is
+        document.head.appendChild(link);
+</script>
+</head>
+<body>
+    <button class="backToCart" onclick="goToCart()">Back to Cart</button>
+
+    <div class="containerCheckout">
+    <div class="list">
+        <h1>Shopping Cart</h1>
+        <!-- Cart items will be dynamically loaded here -->
+        <div id="cartItems">
+            <p>Total Quantity: <span class="totalQuantity">0</span></p>
+            <p>Total Price: <span class="totalPrice">R0</span></p>
+        </div>
+    </div> 
+    <style>
+        
+    </style>     
+<div class="SummaryContainer">
+    <h1>Order Summary</h1>
+    <h2>Receipt Number: <span id="receiptNumber" style="font-weight: normal;"></span></h2>
+    <h2>Order Date: <span id="orderDate" style="font-weight: normal;"></span></h2>
+    <h2>Subtotal: R<span id="subtotal" style="font-weight: normal;">0.00</span></h2>
+    <h3>VAT (15.5%): R<span id="vat" style="font-weight: normal;">0.00</span></h3>
+    <h2>Total: R<span id="total" style="font-weight: normal;">0.00</span></h2>
+    </div>
+
+    
+<div class="AddressContainer">
+    <h1>Address</h1>
+    <p>Shop Number</p>
+    <p>Mall</p>
+    <p>Street Name</p>
+    <p>Code</p>
+    </div>
+    
+    <div >
+        <button class="buttonDownload" type="button" onclick="downloadReceipt()">
+            Download Receipt
+        </button>
+    </div>
+    </div>
+
+    <script src="checkout.js"></script>
+
+
+    <a href="/Checkout/collection.html" class="collectionPolicy" onclick="goToCollection()">Collection Policy</a>
+    <footer>
+        <p>© 2025 Woolworths. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+

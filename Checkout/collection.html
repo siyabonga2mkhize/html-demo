@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+
+    <script>
+        const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = '../CSS/style.css'; // Use relative path based on where your HTML is
+document.head.appendChild(link);
+    </script>
+
+<body>
+    <nav>
+        <button class="backToCheckOut" onclick="goToCheckout()">Back to Checkout</button>
+    </nav>
+    <script>
+        function goToCheckout() {
+    window.location.href = window.location.origin + window.location.pathname.replace(/\/Checkout.*/, '') + '/Checkout/Checkout.html';
+}
+    </script>
+    <header>
+        <h1>Collection</h1>
+    </header>
+    
+    <h2>Woolworths Collection Policy</h2>
+    <h3>1. Purpose</h3>
+    <p>This policy outlines the procedures and guidelines for customers collecting orders from Woolworths stores. It ensures a smooth, secure, and efficient collection process, maintaining high customer service standards.</p>
+    <br>
+    <h3>2. Collection Methods</h3>
+    <p>Customers can choose from the following collection options:</p>
+    <ul>
+        <li><strong>In-Store Collection</strong>: Collect from the customer service desk at a selected Woolworths store.</li>
+        <li><strong>Curbside Collection</strong>: Park in a designated area, and a staff member will bring the order to your vehicle (available at select locations).</li>
+        <li><strong>Locker Collection</strong>: Pick up from secure lockers available at specific stores (available 24/7 at participating stores).</li>
+    </ul>
+    <h3>3. Collection Timeframes</h3>
+    <ul>
+        <li>Orders are typically ready for collection within:</li>
+        <ul>
+            <li><strong>2–6 hours</strong> for same-day orders (if placed before the daily cutoff).</li>
+            <li><strong>Next day</strong> for orders placed after the cutoff time.</li>
+        </ul>
+        <li>Customers will receive an SMS and/or email notification once the order is ready.</li>
+    </ul>
+    <h3>4. Collection Requirements</h3>
+    <p>To collect an order, the customer must present:</p>
+    <ul>
+        <li>A valid <strong>order confirmation (SMS or email)</strong>.</li>
+        <li>A valid <strong>photo ID</strong> (e.g. driver’s license, ID book, passport).</li>
+        <li>If someone else is collecting on the customer’s behalf, they must bring:</li>
+        <ul>
+            <li>A copy of the customer’s ID,</li>
+            <li>Their own ID, and</li>
+            <li>The order confirmation.</li>
+        </ul>
+    </ul>
+    <h3>5. Holding Period</h3>
+    <ul>
+        <li>Orders will be held for <strong>7 calendar days</strong> from the date of notification.</li>
+        <li>Uncollected orders after this period may be:</li>
+        <ul>
+            <li>Cancelled and refunded (excluding perishable items), or</li>
+            <li>Returned to inventory.</li>
+        </ul>
+        <li>Perishable items not collected within <strong>24 hours</strong> may be discarded with no refund due to health and safety regulations.</li>
+    </ul>
+    <h3>6. Changes & Cancellations</h3>
+    <ul>
+        <li>Customers may change their collection time or location (if available) up to <strong>2 hours</strong> before the selected collection window.</li>
+        <li>To cancel an order, contact Woolworths Customer Service at least <strong>2 hours</strong> before the collection time.</li>
+    </ul>
+    <h3>7. Returns at Collection</h3>
+    <ul>
+        <li>Customers may review their order during collection.</li>
+        <li>If any item is incorrect or damaged, customers can request an immediate return or exchange at the collection point.</li>
+    </ul>
+    
+
+
+    <footer>
+        <p>© 2025 Woolworths. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
