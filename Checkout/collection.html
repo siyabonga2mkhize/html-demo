@@ -18,7 +18,7 @@ document.head.appendChild(link);
     </nav>
     <script>
         function goToCheckout() {
-    window.location.href = '/Checkout/Checkout.html';
+    window.location.href = window.location.origin + window.location.pathname.replace(/\/Checkout.*/, '') + '/Checkout/Checkout.html';
 }
     </script>
     <header>
