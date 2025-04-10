@@ -148,3 +148,176 @@ body.showCart .container{
 .listCart::-webkit-scrollbar-button{
     width: 0;
 }
+
+/*Checkout PAge */
+.containerCheckout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    justify-content: space-between; /* Add space between columns */
+    gap: 20px; /* Optional: Add spacing between columns */
+    padding: 20px;
+}
+
+.list, .SummaryContainer, .AddressContainer{
+    flex: 1; /* Each column takes equal width */
+    text-align: center; /* Center-align text in each column */
+    border: 1px solid #ccc; /* Optional: Add borders for clarity */
+    padding: 10px;
+}
+
+.buttonDownload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+ /* Style for the cart item container */
+ .itemcheckout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* Style for the product image */
+.itemcheckout img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Style for the product name */
+.itemcheckout .name {
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style for the product price */
+.itemcheckout .price {
+    font-size: 14px;
+    color: #666;
+    margin-right: 10px;
+}
+
+/* Style for the quantity */
+.itemcheckout .quantity {
+    font-size: 14px;
+    color: #666;
+    margin-right: 10px;
+}
+
+/* Style for the subtotal */
+.itemcheckout .subtotal {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Style for the Summary container */
+    .SummaryContainer {
+        padding: 20px;
+        margin: 20px ;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        max-width: 600px; /* Added to fit within a container */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional for better appearance */
+        
+    }
+    .SummaryContainer h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        text-align: center; 
+        text-underline-offset: 2px;
+        text-decoration: underline;
+    }
+    .SummaryContainer h2 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    .SummaryContainer h3 {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+    .Total {
+        font-size: 1.2em; 
+        font-weight: bold;
+        text-align: right; /* Align total to the right */
+    }
+
+    /*Address container */
+.AddressContainer {
+    padding: 20px;
+    margin: 20px ;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px; /* Added to fit within a container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional for better appearance */
+}
+.AddressContainer h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center; /* Center-align text for better layout */
+}
+.AddressContainer p{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+/* Items list */
+.list{
+    padding: 20px;
+    margin: 20px ;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px; /* Added to fit within a container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional for better appearance */
+}
+.list h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center; /* Center-align text for better layout */
+}
+
+/*download button */
+.buttonDownload {
+    background-color: black; 
+    color: white; 
+    border-radius: 10px; 
+    padding: 5px 10px; 
+    font-size: 18px; 
+    border: none; 
+    cursor: pointer;
+    outline: none; 
+    appearance: none; 
+    position: absolute; 
+    bottom: 200px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+footer{
+    text-align: left;
+    background-color: #eee;
+    margin-top: 150px;
+    font-size: small;
+}
+
+.backToCart{
+    margin-top: 20px; 
+    margin-left: 20px; 
+    transform: none; 
+    color: red;
+}
+/**Collection Page */
+.backToCheckOut{
+    margin-bottom: 20px; 
+    margin-left: 20px; 
+    transform: none; 
+}

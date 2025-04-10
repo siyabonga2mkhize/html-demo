@@ -53,13 +53,22 @@
 
   </div>
   <div class="btn">
-    <button class="close  onclick="closeCart()">CLOSE</button>
-    <button class="checkOut">Checkout</button>
-
+    <button class="close" onclick=closeCart()>CLOSE</button>
+    <button class="checkOut" onclick="goToCheckout()"'>Checkout</button>
   </div>
+
+  
+
+  <script>
+    function goToCheckout() {
+      window.location.href = 'Checkout/Checkout.html';
+    }
+  </script>
 </div>
-
-
 <script src="app.js"></script>
+
+<footer>
+  <p>© 2025 Woolworths. All Rights Reserved.</p>
+</footer>
 </body>
 </html>

@@ -145,6 +145,8 @@ const initApp = () =>
         listProducts = data;
         addDataToHtml(listProducts);
 
+        localStorage.setItem('products', JSON.stringify(listProducts));
+
         //get cart from memory
         if(localStorage.getItem('carts')){
             carts = JSON.parse(localStorage.getItem('carts'));
@@ -152,5 +154,47 @@ const initApp = () =>
         }
     });
 };
+
+window.onload = function () {
+    const cartListContainer = document.querySelector('.list'); // or .listCart, whatever class you use
+    const cartItems = JSON.parse(localStorage.getItem('carts')) || [];
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+  
+    let totalPrice = 0;
+    let totalQuantity = 0;
+  
+    cartListContainer.innerHTML = '';
+  
+    cartItems.forEach(cart => {
+      const product = products.find(p => p.id == cart.product_id);
+      const subtotal = product.price * cart.quantity;
+  
+      totalPrice += subtotal;
+      totalQuantity += cart.quantity;
+  
+      const itemDiv = document.createElement('div');
+      itemDiv.classList.add('item');
+      itemDiv.innerHTML = `
+        <img src="../${product.image}" alt="${product.name}">
+        <div class="name">${product.name}</div>
+        <div class="price">R${product.price}</div>
+        <div class="quantity">Quantity: ${cart.quantity}</div>
+        <div class="subtotal">Subtotal: R${subtotal}</div>
+      `;
+      cartListContainer.appendChild(itemDiv);
+    });
+  
+    document.querySelector('.totalQuantity').innerText = totalQuantity;
+    document.querySelector('.totalPrice').innerText = "R" + totalPrice;
+  };
+  
+  // Function to navigate to Checkout.html
+function goToCheckout() {
+    // Ensure the cart is saved to Local Storage
+    addCartToMemory();
+
+    // Redirect to Checkout.html
+    window.location.href = 'Checkout/Checkout.html';
+}
 
 initApp();
