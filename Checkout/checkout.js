@@ -106,5 +106,5 @@ calculateSummary();
 
     function goToCollection() {
         // Navigate to the Collection Policy page
-        window.location.href = window.location.origin + window.location.pathname.replace(/\/Checkout.*/, '') + '/Checkout/collection.html';
+        window.location.href = window.location.origin + window.location.pathname.replace(/\/Checkout.*/, '') + 'Checkout/collection.html';
     }
