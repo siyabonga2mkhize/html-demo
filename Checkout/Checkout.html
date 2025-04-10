@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .buttonDownload {
+            background-color: black; 
+            color: white; 
+            border-radius: 10px; 
+            padding: 15px 30px; 
+            font-size: 18px; 
+            border: none; 
+            cursor: pointer;    
+        }
+    </style>
+</head>
+<body>
+    <a href="/index.html" class="backToCart" target="_self">Back to Cart</a>
+
+    <div class="containerCheckout">
+    <div class="list">
+        <h1>Shopping Cart</h1>
+        <!-- Cart items will be dynamically loaded here -->
+        <div id="cartItems">
+            <p>Total Quantity: <span class="totalQuantity">0</span></p>
+            <p>Total Price: <span class="totalPrice">R0</span></p>
+        </div>
+    </div> 
+    <style>
+        
+    </style>     
+<div class="SummaryContainer">
+    <h1>Order Summary</h1>
+    <h2>Receipt Number: <span id="receiptNumber" style="font-weight: normal;"></span></h2>
+    <h2>Order Date: <span id="orderDate" style="font-weight: normal;"></span></h2>
+    <h2>Subtotal: R<span id="subtotal" style="font-weight: normal;">0.00</span></h2>
+    <h3>VAT (15.5%): R<span id="vat" style="font-weight: normal;">0.00</span></h3>
+    <h2>Total: R<span id="total" style="font-weight: normal;">0.00</span></h2>
+    </div>
+
+    
+<div class="AddressContainer">
+    <h1>Address</h1>
+    <p>Shop Number</p>
+    <p>Mall</p>
+    <p>Street Name</p>
+    <p>Code</p>
+    </div>
+    
+    <div >
+        <button class="buttonDownload" type="button" onclick="downloadReceipt()">
+            Download Receipt
+        </button>
+    </div>
+    </div>
+
+    <script src="checkout.js"></script>
+
+
+    <a href="/Checkout/collection.html">collection policy</a>
+    <footer>
+        <p>© 2025 Woolworths. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
