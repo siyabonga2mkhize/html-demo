@@ -101,10 +101,10 @@ calculateSummary();
 /*go to cart and collection policy*/
     function goToCart() {
         // Navigate to the Cart page
-        window.location.href = '../index.html';
+        window.location.href = window.location.origin + window.location.pathname.replace(/\/Checkout.*/, '') + '/index.html';
     }
 
     function goToCollection() {
         // Navigate to the Collection Policy page
-        window.location.href = 'collection.html';
+        window.location.href = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '') + '/Checkout/collection.html';
     }
