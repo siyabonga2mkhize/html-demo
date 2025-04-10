@@ -139,7 +139,7 @@ const changeQuantity = (product_id, type) => {
 const initApp = () => 
     {
     //get data from json 
-    fetch('products.json')
+    fetch('Cart extra/products.json')
     .then(response => response.json())
     .then(data => {
         listProducts = data;
